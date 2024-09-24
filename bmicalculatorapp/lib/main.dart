@@ -1,15 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:bmicalculatorapp/input_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const BMICalculator());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class BMICalculator extends StatelessWidget {
+  const BMICalculator({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Flutter Demo');
+    return MaterialApp(
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: const Color(0xFF0A0D22),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFF0A0D22),
+        ),
+      ),
+      home: InputPage(),
+    );
   }
 }
